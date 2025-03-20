@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    font-family:sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: white;
+    font-family: sans-serif;
+}
+
+/*esitlos etiquetas*/
+/*header*/
+header{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top:0;
+    z-index: 9999;
+}
+
+/*responsive nav*/
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 100px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links input{
+    height: 20px;
+
+}
+.burger{
+    display: none;/*Para que no se muestre en pantalla normal*/
+    flex-direction: column;
+    cursor: pointer;
+}
+.line{
+    width: 25px;
+    height: 2.5px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 1px;
+}
+@media screen and (max-width: 1050px){
+    .navbar{
+        position: relative;
+        background-color: #403f3f;
+    
+    }
+    .burger{
+        display: flex;
+        position: absolute;
+        right: 20px;
+
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 50%;
+        height: 1000px;
+        top: 100%;
+        right: 0;
+        margin: 0;
+        background-color: #403f3f;
+        gap: 50px;
+        align-items: center;
+    }
+    .nav-links.active{
+        padding-left: 0;
+        display: flex;
+    }
+    .logo{
+        position: absolute;
+        left: 10px;
+        top: 18px;
+    }
+    .nav-links input{
+        position: absolute;
+        bottom: 220px;
+    }
+    .avatar{
+        position: absolute;
+        right: 60px;
+        top: 28px;
+        }
+    .nav-links li{
+        width: 100%;
+        height: 50px;
+        background-color: #403f3f;
+        position: relative;
+        top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        cursor: pointer;
+    }
+    .nav-links li:hover{
+        background-color: #4d4c4c;
+        color: #9daf6d;
+    }
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent) #403f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+
+}
+nav img{
+    border-radius: 50%;
+}
+nav .img{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 15px black; 
+}
+nav img{
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 15px black;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover{
+    color: #ADC178;
+}
+
+nav input{
+    width: 150px;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+}
+
+.baja{
+    background: #403f3f;
+    background: #403f3f linear-gradient(none);
+    height: 90px;
+}
+/*termina header*/
+/*estilos etiquetas generales*/
+main{
+    margin-top: 120px;
+}
+button{
+    width:100%;
+    height: 50px;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    background-color: #adc178;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #adc178;
+    transition: all .3s ease-in-out;
+}
+
+img{
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #403f3f;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+/*terminan los estilos de las etiquetas*/
+/*estilos para las ids*/
+#logo{
+    border-radius: 50%;
+    width: 5%;
+    height: 90%;
+    margin-top: 0;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 420px);
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 20px;
+    column-count: 3;
+    column-gap: 1rem;
+    margin-top: 80px;
+    justify-content: center;
+}
+/*terminan los estilos para las etiquetas*/
+/*estilos para las clases*/
+.content{
+    width: 85%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.content:hover{
+    transform: scale(1.01);
+    transition: all 0.5s ease-in-out;
+}
+
+
+.content h1{
+    margin-top: 10px;
+    color: #adc178;
+}
+
+.content h3{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.info{
+    width:90%
+}
+
+.img-pueblo{
+    width: 100%;
+    height: 60%;
+    border-radius: 20px 20px 0 0;
+
+}
+
+/*terminan los estilos de las clases*/
+
+/*responsive para el main de la pagina*/
+@media (max-width: 600px){
+    body{
+        height: 830vh; /*altura del body*/
+    }
+
+    #container{/*estilos para que las tarjetas o elementos se organizen en columnas */
+        grid-template-columns: repeat(1, 350px);/*en este caso quiero que sean de a 2 columnas*/
+        gap: 20px;/*separación entre las tarjetas*/
+        margin-left: 0;/*para que no haya margenes no deseados que vengan desde los estilos principales*/
+        display: flex;
+        align-items: center;
+    }
+    .content{
+        height: 60%;
+    }
+    .img-pueblo{
+        width: 100%;
+        height: 60%;
+        border-radius: 20px 20px 0 0;
+    }
+}
+@media (min-width:600px) and (max-width:759px){
+    body{
+        height: 830vh; /*altura del body*/
+    }
+
+    #container{/*estilos para que las tarjetas o elementos se organizen en columnas */
+        grid-template-columns: repeat(2, 320px);/*en este caso quiero que sean de a 2 columnas*/
+        gap: 20px;/*separación entre las tarjetas*/
+        margin-left: 25px;/*para que no haya margenes no deseados que vengan desde los estilos principales*/
+    }
+    .img-pueblo{
+        width: 100%;
+        height: 60%;
+        border-radius: 20px 20px 0 0;
+    }
+}
+@media (min-width:760px) and (max-width:810px){
+    body{
+        height: 380vh; /*altura del body*/
+    }
+    #nav-links{
+        width: 100%;/*van a tener el ancho de la pantalla*/
+    }
+    #container{/*estilos para que las tarjetas o elementos se organizen en columnas */
+        grid-template-columns: repeat(2, 360px);/*en este caso quiero que sean de a 2 columnas*/
+        gap: 20px;/*separación entre las tarjetas*/
+        margin-left: 35px;/*para que no haya margenes no deseados que vengan desde los estilos principales*/
+    }
+}
+
+@media (min-width:811px) and (max-width:1023px){
+    body{
+        height: 310vh; /*altura del body*/
+    }
+
+    #nav-links{
+        width: 100%;/*van a tener el ancho de la pantalla*/
+    }
+    #container{/*estilos para que las tarjetas o elementos se organizen en columnas */
+        grid-template-columns: repeat(2, 400px);/*en este caso quiero que sean de a 2 columnas*/
+        gap: 20px;/*separación entre las tarjetas*/
+    }
+}
+
+@media (min-width:1024px) and (max-width:1200px){
+    body{
+        height: 170vh; /*altura del body*/
+    }
+
+    label{
+        padding: 20px;
+    }
+    #nav-links{
+        width: 98%;/*van a tener el ancho de la pantalla*/
+        justify-content: center;
+    }
+    #container{/*estilos para que las tarjetas o elementos se organizen en columnas */
+        grid-template-columns: repeat(3, 325px);/*en este caso quiero que sean de a 2 columnas*/
+        gap: 20px;/*separación entre las tarjetas*/
+    }
+}

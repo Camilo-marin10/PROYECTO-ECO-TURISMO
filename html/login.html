@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "shortcut icon" href="/img/logo.jpg">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<!-- Contenedor principal del formulario para inicio de sesión -->
+<div class="login-container">
+    <!-- Caja que contiene tos los elementos del login -->
+    <div class="login-box">
+        <!-- Encabezado con logo y mensaje de bienvenida -->
+        <h2> <img src="/img/logo.jpg" alt="">Bienvenido🌿</h2>
+        <!-- formulario para elegir el rol que desee el usuario -->
+        <div class="form-group">
+            <!-- se hace un menu desplegable para que se vean y se puedan seleccionar los roles -->
+            <select id="rol" name="rol" required> <!--se abre seccion-->
+                <option>Seleccione su rol</option> <!--opcion para elegir el rol-->
+                <option value="admin">Administrador</option> <!--opcion para elegir el admi-->
+                <option value="guia">Dueño</option> <!--opcion para elegir el guiat-->
+                <option value="turista">Turista</option> <!--opcion para elegir el turista-->
+
+            </select> <!--se cierra seccion-->
+        </div>
+        <!-- Formulario principal para inicio de sesión -->
+        <form class="login-form">
+            <!-- Campo para ingresar el correo electrónico -->
+            <div class="form-group">
+                <input type="email" id="email" required> <!--se crea un input para que genere una casilla en la que el usuario ingresara la info-->
+                <label for="email">Correo</label><!--hace que se muestre lo que queremos decir, ej:correo-->
+            </div>
+            <!-- Campo para ingresar la contraseña -->
+            <div class="form-group">
+                <input type="password" id="password" required><!--se crea un input para que genere una casilla en la que el usuario ingresara la info-->
+                <label for="password">Contraseña</label><!--hace que se muestre lo que queremos decir, ej:contraseña-->
+            </div>
+            <!-- Botón para enviar el formulario -->
+            <button type="submit">Acceder</button><!--con este boton se podra enviar la informacion a otro sitio-->
+            <!-- Enlaces adicionales para recuperar contraseña o crear cuenta -->
+            <div class="form-footer">
+                <a href="contraseña.html">Olvidaste tu contraseña?</a><!--enlaces para cuando precione una opcion de estas envie a contraseña-->
+                <a href="registro.html">Crea una cuenta </a><!--enlaces para cuando precione una opcion de estas envie a registro-->
+            </div>
+            <a href="/html/inicio.html">Volver a inicio</a>
+        </form>
+    </div>
+</div>
+<!-- Pie de página con información de derechos de autor -->
+<footer>&copy; 2025 Ecoturismo Risaralda|todos los derechos reservados.</footer><!--se hace el footer para que se pueda ver que es una pagina-->
+</body>
+</html>

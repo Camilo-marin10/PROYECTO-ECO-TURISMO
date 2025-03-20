@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel = "shortcut icon" href="/img/logo.jpg">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="registro-container"><!--se abre contenedor para el registro-->
+        <div class="auth-box"><!--se crea un div para el registro-->
+            <h2>Registro</h2>
+            <form><!--se abre un formulario-->
+                <div class="form-group"><!--formulario para que la info tenga donde estar-->
+                    <label for="registerName">Nombre Completo</label><!--se crea un label para lo que vamos a ver-->
+                    <input type="text" id="registerName" required><!-- un input que es donde copiaremos lo que nos pide ingresar-->
+                </div>
+                <div class="form-group"><!--formulario para que la info tenga donde estar-->
+                    <label for="registerEmail">Correo Electrónico</label><!--se crea un label para lo que vamos a ver-->
+                    <input type="email" id="registerEmail" required><!-- un input que es donde copiaremos lo que nos pide ingresar-->
+                </div>
+                <div class="form-group"><!--formulario para que la info tenga donde estar-->
+                    <label for="registerPassword">Contraseña</label><!--se crea un label para lo que vamos a ver-->
+                    <input type="password" id="registerPassword" required><!-- un input que es donde copiaremos lo que nos pide ingresar-->
+                </div>
+                <div class="form-group"><!--formulario para que la info tenga donde estar-->
+                    <label for="confirmPassword">Confirmar Contraseña</label><!--se crea un label para lo que vamos a ver-->
+                    <input type="password" id="confirmPassword" required><!-- un input que es donde copiaremos lo que nos pide ingresar-->
+                </div>
+                <button type="submit" class="auth-btn">Registrarse</button><!--boton para enviar la informacion a otro sitio-->
+                <div class="toggle-form"><!--se crea este div para que se pueda ver la informacion que hay dentro-->
+                    <a href="/html/login.html">¿Ya tienes una cuenta? Inicia Sesión</a><!--enlace para que cuando lo precione lo mande a la pagina de login-->
+                    <a href="/html/secciondestinos.html">Volver a destino</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Reservas</title>
+    <link rel="stylesheet" href="/CSS/calendario.css">
+    <link rel="icon" href="/imagenes/logo.jpg">
+</head>
+<body>
+    <main>
+        <div class="calendar-section"><!-- Contenedor principal de la sección del calendario -->
+            <img src="/img/logo.jpg" class="logo" alt="logo"><!-- Logo de la página -->
+            <h2>Reserva tu Estadía🪴</h2><!-- Título principal con emoji de planta -->
+            <div class="booking-form"><!-- Formulario de reserva -->
+                <div class="date-inputs"><!-- Contenedor para los campos de fecha -->
+                    <div class="input-group"><!-- Grupo de entrada para la fecha de check-in -->
+                        <label for="check-in">Check-in/entrada</label><!-- Etiqueta para el campo de check-in -->
+                        <input type="date" id="check-in" required><!-- Campo de entrada tipo fecha para check-in, marcado como obligatorio -->
+                    </div>
+                    <div class="input-group"><!-- Grupo de entrada para la fecha de check-out -->
+                        <label for="check-out">Check-out/salida</label><!-- Etiqueta para el campo de check-out -->
+                        <input type="date" id="check-out" required><!-- Campo de entrada tipo fecha para check-out, marcado como obligatorio -->
+                    </div>
+                    <div class="input-group"><!-- Grupo de entrada para selección de huéspedes -->
+                        <label for="guests">Huéspedes</label><!-- Etiqueta para el selector de huéspedes -->
+                        <select id="guests"><!-- Menú desplegable para seleccionar número de huéspedes -->
+                            <option value="personas">Cantidad de personas</option><!-- Opciones del menú desplegable con diferentes cantidades de personas -->
+                            <option value="1">1 Persona</option><!--opciones que queremos que esten-->
+                            <option value="2">2 Personas</option><!--opciones que queremos que esten-->
+                            <option value="3">3 Personas</option><!--opciones que queremos que esten-->
+                            <option value="4">4 Personas</option><!--opciones que queremos que esten-->
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="guests">Habitaciones</label>
+                        <select id="guests">
+                            <option value="personas">Numero de habitaciones</option>
+                            <option value="1">Habitacion numero 1</option>
+                            <option value="2">Habitacion numero 2</option>
+                            <option value="3">Habitacion numero 3</option>
+                            <option value="4">Habitaciones numero 4</option>
+                            <option value="4">Habitaciones numero 5</option>
+                            <option value="4">Habitaciones numero 6</option>
+                            <option value="4">Habitaciones numero 7</option>
+                            <option value="4">Habitaciones numero 8</option>
+                            <option value="4">Habitaciones numero 9</option>
+                            <option value="4">Habitaciones numero 10</option>
+                        </select>
+                    </div>
+                    <button class="search-btn" onclick="window.location.href='/html/disponibilidad.html'">Buscar disponibilidad</button> <!-- Botón para buscar disponibilidad que redirige a la página de hospedajes -->
+                    <button class="search-btn2" onclick="window.location.href='/html/hospedajes.html'">Volver a hospedajes</button><!-- Botón para volver a la página de hospedajes -->
+                </div>
+            </div>
+        </div>
+    </main>
+</html>

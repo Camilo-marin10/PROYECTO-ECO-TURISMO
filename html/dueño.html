@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/img/logo.jpg">
+        <link rel="stylesheet" href="/css/dueño.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--header-->
+        <header>
+            <nav class="navbar">
+    
+                <!--que la imagen lleve al inicio de la pagina-->
+                <a href="/html/inicio.html"> <img src="/img/LogoProyecto.jpg" class="logo" alt=""></a>
+                <ul class="nav-links">
+                
+                    <!--botones del header-->
+                    <li><a href="/html/inicio.html"> Inicio </a></li>
+                    <li><a href="/html/destinospueblos.html"> Destinos </a></li>
+                    <li><a href="/html/hospedajes.html"> Hospedajes </a></li>
+                    <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+                
+                    
+                </ul>
+                
+                <a href="/html/usuario.html"><img src="/img/avatar.png" class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
+                <div class="burger active">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="section1">
+                <h1>Mis Hospedajes 🌿</h1>
+            </section>
+            <section id="section2"><!--van a ir los destinos y si el dueño no tiene destinos, está la opcion de que añada hasta 3-->
+                <div class="card">
+                    <div class="img">
+                        <img src="/img/h-pedro.jpg" alt="img destino">
+                    </div>
+                    <h2>Tu Destino</h2>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odit, veritatis, placeat autem vitae</p>
+                    <button onClick="editarHospedaje()">Editar Hospedajes</button>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="/img/guatica.webp" alt="img destino">
+                    </div>
+                    <h2>Tu Destino</h2>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odit, veritatis, placeat autem vitae</p>
+                    <button onclick="editarHospedaje()">Editar Hospedajes</button>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="/img/fondopueblos.gif" alt="img destino">
+                    </div>
+                    <h2>Agregar Hospedaje</h2>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odit, veritatis, placeat autem vitae</p>
+                    <button onClick="crearHospedaje()">Agregar Hospedaje</button>
+                </div>
+            </section>
+
+            <form action="" id="editarHospedaje" style="display: none;">
+                <img src="/img/x.png" alt="" class="cerrar" onclick="cerrar()">
+
+                <h1 class="titulo">Editar Hospedaje</h1>
+                <h3>Nombre del hospedaje</h3>
+                <input type="text" placeholder="Nombre">
+
+                <h3>Ciudad donde se ubica el hospedaje</h3>
+                <select id="rol" name="rol" required>
+                    <option>Seleccione la Ciudad</option>
+                    <option value="">Pereira</option>
+                    <option value="">Dosquebradas</option>
+                    <option value="">Santa Rosa</option>
+                    <option value="">Apia</option>
+                    <option value="">Marsella</option>
+                    <option value="">Pueblo Rico</option>
+                    <option value="">Belén de umbria</option>
+                    <option value="">Quinchia</option>
+                    <option value="">Mistrató</option>
+                    <option value="">La Celia</option>
+                    <option value="">Guatica</option>
+                    <option value="">Balboa</option>
+                </select>
+
+                <h3>Desccripción</h3>
+                <textarea name="Description" id="Description" cols="50" rows="10"></textarea>
+                <div class="precio-habitaciones">
+                    <h3>Precio</h3>
+                    <input type="number">
+                    <h3>Cantidad de Habitaciones</h3>
+                    <input type="number">
+                </div>
+
+                <button id="images">Agregar Imágenes</button><br>
+                <button id="edit" type="submit" onclick="cerrar()">Editar hospedaje</button>
+            </form>
+
+            <form id="crearHospedaje" style="display: none;">
+                <img src="/img/x.png" alt="" class="cerrar" onclick="cerrar()">
+
+                <h1 class="titulo">Agragar Hospedaje</h1>
+                <input type="text">
+
+                <!--seleccionar la ciudad donde está el hospedaje-->
+                <h3>Ciudad donde se ubica el hospedaje</h3>
+                <select id="rol" name="rol" required>
+                    <option>Seleccione la Ciudad</option>
+                    <option value="">Pereira</option>
+                    <option value="">Dosquebradas</option>
+                    <option value="">Santa Rosa</option>
+                    <option value="">Apia</option>
+                    <option value="">Marsella</option>
+                    <option value="">Pueblo Rico</option>
+                    <option value="">Belén de umbria</option>
+                    <option value="">Quinchia</option>
+                    <option value="">Mistrató</option>
+                    <option value="">La Celia</option>
+                    <option value="">Guatica</option>
+                    <option value="">Balboa</option>
+                </select>
+
+                <h3>Desccripción</h3>
+                <textarea name="Description" id="Description" cols="50" rows="10"></textarea>
+                <div class="precio-habitaciones">
+                    <h3>Precio</h3>
+                    <input type="number">
+                    <h3>Cantidad de Habitaciones</h3>
+                    <input type="number">
+                </div>
+
+                <h3>PDF del RUT</h3>
+                <button id="images">Agregar Imágenes</button><br>
+                <button id="create" type="submit" onclick="cerrar()">Agregar hospedaje</button>
+            </form>
+        </main>
+
+        <footer>Copyright &copy; 2024-2025 Ecoturismo Risaralda Todos los derechos reservados</footer>
+        <script type="text/javascript" src="/js/inicio.js"></script>
+    </body>
+</html>

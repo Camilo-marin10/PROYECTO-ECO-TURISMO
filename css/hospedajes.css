@@ -1,0 +1,375 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    overflow-x: hidden;
+    }
+header{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top:0;
+    z-index: 9999;
+}
+
+/*responsive nav*/
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 100px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links input{
+    height: 20px;
+
+}
+.burger{
+    display: none;/*Para que no se muestre en pantalla normal*/
+    flex-direction: column;
+    cursor: pointer;
+}
+.line{
+    width: 25px;
+    height: 2.5px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 1px;
+}
+@media screen and (max-width: 1050px){
+    .navbar{
+        position: relative;
+        background-color: #403f3f;
+    
+    }
+    .burger{
+        display: flex;
+        position: absolute;
+        right: 20px;
+
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 50%;
+        height: 1000px;
+        top: 100%;
+        right: 0;
+        margin: 0;
+        background-color: #403f3f;
+        gap: 50px;
+        align-items: center;
+    }
+    .nav-links.active{
+        padding-left: 0;
+        display: flex;
+    }
+    .logo{
+        position: absolute;
+        left: 10px;
+        top: 18px;
+    }
+    .nav-links input{
+        position: absolute;
+        bottom: 220px;
+    }
+    .avatar{
+        position: absolute;
+        right: 60px;
+        top: 28px;
+        }
+    .nav-links li{
+        width: 100%;
+        height: 50px;
+        background-color: #403f3f;
+        position: relative;
+        top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        cursor: pointer;
+    }
+    .nav-links li:hover{
+        background-color: #4d4c4c;
+        color: #9daf6d;
+    }
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent) #403f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+}
+nav img{
+    border-radius: 50%;
+}
+nav .img{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 15px black; 
+}
+nav img{
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 15px black;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover{
+    color: #ADC178;
+}
+
+nav input{
+    width: 150px;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+}
+
+.baja{
+    background: #403f3f;
+    background: #403f3f linear-gradient(none);
+    height: 90px;
+}
+img{
+    height: 79px;
+    width: 79px;
+    border-radius: 40px;
+    
+}
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    position: relative;
+    top:20px;
+    margin-bottom: 2rem;
+}
+
+main{
+    margin-top: 80px;
+}
+
+.hospedajes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.hospedaje-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.hospedaje-card:hover {
+    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
+}
+
+.hospedaje-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.hospedaje-info {
+    padding: 1.5rem;
+}
+
+.hospedaje-info h2 {
+    color: #ADC178;
+    margin: 0 0 0.5rem 0;
+}
+
+.ubicacion {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.descripcion {
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.detalles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.reservar-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ADC178;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.reservar-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.reservar-btn:hover {
+    background-color: #9eb06a;
+}
+
+footer {
+    background-color: #403f3f;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width:1200px){
+    body{
+        width: 100%;
+    }
+    nav{ /*estilos para el nav*/
+        width: 100%;/*va a ser del ancho del header*/
+        height: 90px;/*va a ser de 90px de largo*/
+        background-color: #403f3f; 
+        overflow: hidden;/*lo que se desborde no se ve*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6%;/*separación entre los elementos de la nav bar*/
+    
+    }
+    nav.img{/*estilos para las imagenes de la nav bar*/
+        border-radius: 50%;/*todas las imagenes van a ser circulares*/
+        width: 70px;
+        height: 70px; 
+        box-shadow: none;
+    }
+    
+    nav a{/*estilos para los links de la nav bar*/
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    label{/*estilos para los textos de la nav bar*/
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 0 0 5px black;/*sombra leve para el texto*/
+        padding: 10px;/*van a tener un relleno de 10px por lado*/
+        background-color: #adc178; /*va a ser de este color*/
+    }
+    
+    nav input{/*estilos para la barra de busqueda*/
+        width: 10%;
+        padding: 8px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 0 5px black;
+    }
+
+    #menu-hamburguesa{/*estilos para el botón del menú hamburguesa*/
+        display: flex;/*mostrar menú hamburguesa*/
+        height: 80%;
+        margin: 0;
+        position: absolute;/*position absolute para poder acomodar el botón mejor*/
+        left: 20px;/*se acomoda el botón con espacio de 20px a la izquierda*/
+        background-color: #403f3f;
+        border:none;/*no va a tener borde*/
+        box-shadow: none;/*no va a tener sombra*/
+        padding: 0;
+    }
+
+    #menu-hamburguesa img{/*estilos para la imagen del menú hamburguesa*/
+        width: 100%;
+        height: 100%;
+    }
+
+    #nav-links{/*estilos para que los elementos de la nav bar se escondan y acomodarlos en el menú*/
+        position: absolute;/*position absolute para organizarlos mejor*/
+        top: 60px;
+        left: 0;
+        width: 95%;/*van a tener el ancho de la pantalla*/
+        display: none;
+        flex-direction: column;/*flex direction column para que aparezcan en horizontal*/
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        height: 40vh;
+        gap: 50px;
+        background-color: #faedcd;
+        margin-top: 30px;
+    }
+
+    #nav-links.active{/*estilos para que cuando se accione el botón aparezcan los hipervinculos que son los elementos de la nav bar*/
+        display: flex;
+    }
+
+    
+    #logo{/*ajustar el logo del proyecto en la pagina*/
+        width: 50px;
+        height: 50px;
+        margin-left: 100px;/*margin left para que no esté tan junto al botón del menú*/
+    }
+
+    .search{/*estilos para hacer mas hancha la barra de busqueda*/
+        width: 40%;
+    }
+
+    .img{/*tuve que hacerle esto exclusivo a la imagen de perfil porque no se organizaba >:(*/
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+}
+@media (max-width: 768px) {
+    .hospedajes-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hospedaje-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .detalles {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
